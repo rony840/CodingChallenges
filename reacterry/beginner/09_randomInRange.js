@@ -1,6 +1,9 @@
+export const randomInRange = (min, max) => {
+    // Write your code here
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
 let min = 5
 let max = 10
 
-let number = Math.random() * 10
-
-console.log(Math.floor(Math.random() * (max - min) + min))
+console.log(randomInRange(min,max))
