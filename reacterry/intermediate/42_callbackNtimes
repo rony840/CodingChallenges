@@ -1,0 +1,14 @@
+export const callbackAtMostN = (callback, n) => {
+    // Write your code here
+    let callbackLimitReached = false
+    console.log(n)
+    if (callbackLimitReached == false){
+      return function (...args){
+        if(n>0){
+          n = n - 1
+          callbackLimitReached = true
+          return callback(...args)
+        }
+      }
+    }
+}
