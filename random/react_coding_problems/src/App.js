@@ -6,9 +6,11 @@ let count = 0;
 
 function App() {
   return (
-    <div className="App" style={{ display: 'flex', height: '100vh' }}>
+    <div className="App" style={{ display: 'flex', flexDirection:'column', height: '100vh' }}>
+      <h1>React Coding Problems</h1>
+      <div style={{ display: 'flex', flexDirection:'row',height: '100%'}}>
       <BrowserRouter>
-        <nav style={{ width: '200px', background: '#f0f0f0', padding: '20px', boxSizing: 'border-box' }}>
+        <nav style={{ display: 'flex',flexDirection:'column', width: '200px', background: '#f0f0f0', padding: '20px', boxSizing: 'border-box' }}>
           {Object.keys(Problems).map((key) => (
             <div key={key} style={{ marginBottom: '10px' }}>
               <Link to={`/${key}`} style={{ textDecoration: 'none', color: 'black' }}>
@@ -25,6 +27,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      </div>
     </div>
   );
 }
